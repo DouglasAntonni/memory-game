@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+    user-select: none;
+}
+.container {
+    width: 530px;
+    height: 580px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(
+        325deg, 
+        #03001e 0%,
+        #7303c0 30%,
+        #ec38bc 70%,
+        #fdeff9 100%
+        );
+        padding: 40px 60px;
+    
+}
+h2{
+    font-size: 3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.reset {
+    padding: 15px 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: 200px; /* Definindo um tamanho máximo para manter o layout elegante */
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    color: #000000;
+    border: 2px solid #ec38bc; /* Borda com cor de destaque */
+    font-size: 1.2em; /* Tamanho da fonte ajustado */
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px; /* Bordas arredondadas */
+    transition: all 0.3s ease-in-out; /* Suave transição ao passar o mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+.reset:hover {
+    background: linear-gradient(145deg, #ec38bc, #fdeff9); /* Cor de fundo elegante ao passar o mouse */
+    color: #ffffff; /* Texto branco para contraste */
+    border-color: #fdeff9; /* Alterar a cor da borda ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10); /* Aumentar a sombra */
+}
+
+.reset:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style:preserve-3d;
+    perspective: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+.item{
+    
+    position: relative;
+    width: 100px;
+    height: auto; /* Para que a altura se ajuste automaticamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7303c0;
+    font-size:4em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #404040;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+
+}
+.item.boxOpen::after {
+    transform: rotateY(180deg); /* Certifique-se de que o 'after' também rotaciona ao abrir a carta */
+}
+
+.boxOpen {
+    transform: rotateY(0deg); /* Manter rotação correta */
+}
+.matched {
+    background-color: #32cd32;
+    transform: rotateY(0deg);
+}
+.timer, .score {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+}

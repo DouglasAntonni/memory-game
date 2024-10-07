@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div class="container">
+            <h2>JOGO DA MEMÓRIA</h2>
+            
+            <!-- Timer -->
+            <div class="timer">
+                Tempo: <span id="time">60</span> seconds
+            </div>
+    
+            <!-- Score -->
+            <div class="score">
+                Jogadas: <span id="attempts">0</span>
+            </div>
+            
+            <!-- Game Area -->
+            <div class="game"></div>
+    
+            <!-- Reset Button -->
+            <button class="reset" onclick="resetGame()">Reset</button>
+        </div>
+    
+       
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+</html>
