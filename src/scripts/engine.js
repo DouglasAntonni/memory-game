@@ -48,7 +48,7 @@ function checkMatch() {
         matchedCards.push(card1, card2);
         if (matchedCards.length === emojis.length) {
             clearInterval(timer);
-            setTimeout(() => alert("Congratulations! You've won!"), 500);
+            setTimeout(() => alert("Parabens! Você venceu!"), 500);
         }
     } else {
         card1.classList.remove('boxOpen');
@@ -63,7 +63,7 @@ function startTimer() {
         document.getElementById("time").innerHTML = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(timer);
-            alert("Game Over! Time's up!");
+            alert("Game Over! O tempo Acabou!");
             resetGame();
         }
         timeLeft--;
