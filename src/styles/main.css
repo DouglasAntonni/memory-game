@@ -3,7 +3,13 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #000000;
+    background: linear-gradient(
+        325deg, 
+        #03001e 100%,
+        #7303c0 70%,
+        #ec38bc 30%,
+        #fdeff9 0%
+        );
     user-select: none;
 }
 .container {
@@ -31,6 +37,7 @@ h2{
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    
 }
 .reset {
     padding: 15px 20px;
@@ -82,6 +89,7 @@ h2{
     font-size:4em;
     transform: rotateY(180deg);
     transition: 0.25s;
+    border-radius: 10px;
 }
 .item::after{
     content: "";
@@ -91,6 +99,7 @@ h2{
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
+    border-radius: 10px;
 
 }
 .item.boxOpen::after {
